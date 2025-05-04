@@ -69,6 +69,26 @@
             outline: none;
         }
         
+        /* Dropdown Styling */
+        .dropdown-menu {
+            border: none;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+        }
+        
+        .dropdown-item {
+            padding: 10px 20px;
+            transition: all 0.2s ease;
+        }
+        
+        .dropdown-item:hover {
+            background: rgba(58, 134, 255, 0.1);
+            color: var(--primary-color);
+            transform: translateX(5px);
+        }
+        
         /* Card Styling */
         .card {
             border: none;
@@ -126,13 +146,23 @@
         }
         
         ul li:before {
-            content: '•';
+            content: 'none';
             color: var(--primary-color);
             font-weight: bold;
             position: absolute;
             left: -15px;
         }
         
+        /* Menghilangkan titik biru bundar kecil di bagian atas navbar */
+        .navbar .navbar-nav li:before {
+            content: none;
+        }
+        
+        /* Jika titik tersebut adalah bagian dari custom styling, pastikan untuk menghilangkannya */
+        .navbar .navbar-nav li.nav-item:after {
+            display: none;
+        }
+
         /* Typography */
         h4 {
             color: var(--dark-color);
@@ -182,7 +212,9 @@
     </style>
 </head>
 <body>
-    <!-- Navbar -->
+    <!-- Navbar - Conditional based on login status -->
+    @if(Auth::check())
+    <!-- Navbar for Logged-in Users -->
     <nav class="navbar navbar-expand-lg navbar-light sticky-top">
         <div class="container">
             <a class="navbar-brand" href="#">
@@ -194,8 +226,51 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="aspirasi"><i class="fas fa-home me-1"></i> Beranda</a>
+                        <a class="nav-link" href="aspirasi"><i class="fas fa-bullhorn me-1"></i> Aspirasi</a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="about"><i class="fas fa-info-circle me-1"></i> Tentang</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="data"><i class="fas fa-history me-1"></i> Data</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="fas fa-user-circle me-1"></i> <span>{{ Auth::user()->name }}</span>
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="userDropdown">
+                            <li><a class="dropdown-item" href="profile"><i class="fas fa-id-card me-2"></i>Profil Saya</a></li>
+                            <li><a class="dropdown-item" href="settings"><i class="fas fa-cog me-2"></i>Pengaturan</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li>
+                                <a class="dropdown-item text-danger" href="{{ route('logout') }}" 
+                                   onclick="event.preventDefault();
+                                   document.getElementById('logout-form').submit();">
+                                    <i class="fas fa-sign-out-alt me-2"></i>Logout
+                                </a>
+                                <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                                    @csrf
+                                </form>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    @else
+    <!-- Original Navbar for Non-logged-in Users -->
+    <nav class="navbar navbar-expand-lg navbar-light sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <i class="fas fa-comment-dots me-2"></i>SAMA-TI
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    
                     <li class="nav-item">
                         <a class="nav-link" href="aspirasi"><i class="fas fa-bullhorn me-1"></i> Aspirasi</a>
                     </li>
@@ -203,7 +278,7 @@
                         <a class="nav-link active" href="about"><i class="fas fa-info-circle me-1"></i> Tentang</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="register"><i class="fas fa-sign-in-alt me-1"></i> Register</a>
+                        <a class="nav-link" href="register"><i class="fas fa-user-plus me-1"></i> Register</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="login"><i class="fas fa-sign-in-alt me-1"></i> Login</a>
@@ -212,6 +287,7 @@
             </div>
         </div>
     </nav>
+    @endif
 
     <!-- Main Content -->
     <div class="container py-5">
@@ -225,7 +301,7 @@
                         <h4 class="text-center mb-4">Selamat datang di Sistem Online Suara Aspirasi Mahasiswa Teknologi Informasi</h4>
                         
                         <div class="text-center mb-4">
-                            <img src="{{ asset('images/advo.jpg') }}" alt="Foto Saya" style="max-width: 50%; height: auto;">
+                            <img src="{{ asset('images/BG_ti.jpg') }}" alt="Foto Saya" style="max-width: 30%; height: auto;">
                         </div>
                         
                         <p>SAMA-TI adalah platform website yang dirancang untuk menampung berbagai aspirasi, saran, kritik, dan masukan dari Kategori Akademik maupun Non Akademik. Kami percaya bahwa setiap suara harus didengar dan setiap pendapat bernilai untuk pengembangan yang lebih baik.</p>
@@ -278,11 +354,14 @@
                         <h5><i class="fas fa-address-book me-2"></i>Kontak</h5>
                         <p>Jika Anda memiliki pertanyaan lebih lanjut atau mengalami masalah dengan sistem kami, silakan hubungi tim dukungan kami melalui instagram <a href="#" class="text-decoration-none">@hmti.unimus</a></p>
                         
-                        <div class="text-center mt-5">
+                        <div class="text-center mt-5 mb-4">
                             <a href="#" class="btn btn-primary me-2"><i class="fas fa-bullhorn me-2"></i>Sampaikan Aspirasi</a>
+                            @if(!Auth::check())
                             <a href="#" class="btn btn-outline-primary"><i class="fas fa-sign-in-alt me-2"></i>Login</a>
+                            @endif
                         </div>
-                        
+
+                        <img src="{{ asset('images/advo.jpg') }}" alt="Foto Saya" style="max-width: 100%; height: auto;">
                         <p class="text-center mt-4 fst-italic">Terima kasih telah melakukan aspirasi di SAMA-TI.</p>
                     </div>
                 </div>
@@ -301,16 +380,19 @@
                 <div class="col-md-3">
                     <h5 class="mb-3">Tautan</h5>
                     <ul class="list-unstyled">
-                        <li><a href="#" class="text-white text-decoration-none">Beranda</a></li>
                         <li><a href="#" class="text-white text-decoration-none">Aspirasi</a></li>
                         <li><a href="#" class="text-white text-decoration-none">Tentang</a></li>
+                        @if(Auth::check())
+                        <li><a href="#" class="text-white text-decoration-none">Data</a></li>
+                        @endif
                     </ul>
                 </div>
                 <div class="col-md-3">
                     <h5 class="mb-3">Hubungi Kami</h5>
                     <ul class="list-unstyled">
                         <li><i class="fab fa-instagram me-2"></i><a href="#" class="text-white text-decoration-none">@hmti.unimus</a></li>
-                        <li><i class="fas fa-envelope me-2"></i><a href="#" class="text-white text-decoration-none">hmti@unimus.ac.id</a></li>
+                        <li><i class="fab fa-instagram me-2"></i><a href="#" class="text-white text-decoration-none">@advokastrat.hmti</a></li>
+                        <li><i class="fab fa-tiktok me-2"></i><a href="#" class="text-white text-decoration-none">@hmti_unimus</a></li>
                     </ul>
                 </div>
             </div>
