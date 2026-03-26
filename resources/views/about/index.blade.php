@@ -216,6 +216,47 @@
                 padding: 20px;
             }
         }
+        
+        /* Dark Mode Styling overrides */
+        [data-bs-theme="dark"] body {
+            background: linear-gradient(135deg, #121212 0%, #2a2a35 100%);
+            color: #e0e0e0;
+        }
+        [data-bs-theme="dark"] .navbar {
+            background: rgba(30, 30, 30, 0.8);
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
+        }
+        [data-bs-theme="dark"] .nav-link, 
+        [data-bs-theme="dark"] .navbar-brand {
+            color: #e0e0e0;
+        }
+        [data-bs-theme="dark"] h4,
+        [data-bs-theme="dark"] h5 {
+            color: #e0e0e0 !important;
+        }
+        [data-bs-theme="dark"] h5.text-primary {
+            color: var(--primary-color) !important;
+        }
+        [data-bs-theme="dark"] .card {
+            background: rgba(40, 40, 40, 0.9);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3), 0 5px 15px rgba(0, 0, 0, 0.2);
+            color: #e0e0e0;
+        }
+        [data-bs-theme="dark"] p,
+        [data-bs-theme="dark"] label,
+        [data-bs-theme="dark"] .table {
+            color: #b0b0b0;
+        }
+        [data-bs-theme="dark"] .dropdown-menu {
+            background: rgba(40, 40, 40, 0.95);
+        }
+        [data-bs-theme="dark"] .dropdown-item {
+            color: #e0e0e0;
+        }
+        [data-bs-theme="dark"] .dropdown-item:hover {
+            background: rgba(58, 134, 255, 0.2);
+            color: var(--primary-color);
+        }
     </style>
 </head>
 <body>
@@ -240,6 +281,11 @@
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="data"><i class="fas fa-history me-1"></i> Data</a>
+                    </li>
+                    <li class="nav-item">
+                        <button class="btn btn-link nav-link shadow-none" id="theme-toggle" title="Toggle Dark/Light Mode">
+                            <i class="fas fa-moon"></i>
+                        </button>
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -289,6 +335,11 @@
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="login"><i class="fas fa-sign-in-alt me-1"></i> Login</a>
+                    </li>
+                    <li class="nav-item">
+                        <button class="btn btn-link nav-link shadow-none" id="theme-toggle" title="Toggle Dark/Light Mode">
+                            <i class="fas fa-moon"></i>
+                        </button>
                     </li>
                 </ul>
             </div>
@@ -415,6 +466,35 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
     <script>
+        // Theme toggling logic
+        const themeToggles = document.querySelectorAll('#theme-toggle');
+        const currentTheme = localStorage.getItem('theme') || 
+            (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+            
+        function setTheme(theme) {
+            document.documentElement.setAttribute('data-bs-theme', theme);
+            localStorage.setItem('theme', theme);
+            themeToggles.forEach(toggle => {
+                const icon = toggle.querySelector('i');
+                if(theme === 'dark') {
+                    icon.classList.remove('fa-moon');
+                    icon.classList.add('fa-sun', 'text-warning');
+                } else {
+                    icon.classList.remove('fa-sun', 'text-warning');
+                    icon.classList.add('fa-moon');
+                }
+            });
+        }
+        
+        setTheme(currentTheme);
+        
+        themeToggles.forEach(toggle => {
+            toggle.addEventListener('click', () => {
+                const newTheme = document.documentElement.getAttribute('data-bs-theme') === 'dark' ? 'light' : 'dark';
+                setTheme(newTheme);
+            });
+        });
+
         // Initialize AOS animation
         AOS.init({
             duration: 800,
