@@ -14,6 +14,11 @@ class AppServiceProvider extends ServiceProvider
         //
     }
 
+    // app/Providers/RouteServiceProvider.php
+
+    public const HOME = '/aspirasi';
+
+
     /**
      * Bootstrap any application services.
      */

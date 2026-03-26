@@ -13,7 +13,7 @@ use App\Http\Controllers\AspirationController;
 */
 
 // Route home
-Route::get('/', [AspirationController::class, 'index'])->name('home');
+Route::get('/', [AspirationController::class, 'index'])->name('aspirasi');
 
 // Route untuk aspirasi
 Route::get('/aspirasi', [AspirationController::class, 'index'])->name('aspirations.index');
@@ -25,6 +25,8 @@ Route::get('/about', [AboutController::class, 'index'])->name('about.index');
 
 // Route untuk data pengguna
 Route::get('/data', [UserController::class, 'index'])->name('users.index');
+
+Route::get('/login', function () {return view('aspirations');})->name('dashboard');
 
 // Route autentikasi (Laravel sudah menyediakan)
 Auth::routes();

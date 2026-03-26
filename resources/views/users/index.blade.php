@@ -133,36 +133,36 @@
             box-shadow: 0 8px 20px rgba(58, 134, 255, 0.4);
         }
         
-        /* List Styling */
+        /* List Styling - MODIFIED TO REMOVE BLUE DOTS */
         ul li, ol li {
             margin-bottom: 10px;
             position: relative;
             padding-left: 5px;
         }
         
-        ul {
+        /* Regular lists will have dots but navbar lists won't */
+        ul:not(.navbar-nav):not(.dropdown-menu) {
             list-style-type: none;
             padding-left: 20px;
         }
         
-        ul li:before {
-            content: 'none';
+        ul:not(.navbar-nav):not(.dropdown-menu) li:before {
+            content: '.';
             color: var(--primary-color);
             font-weight: bold;
             position: absolute;
             left: -15px;
         }
         
-        /* Menghilangkan titik biru bundar kecil di bagian atas navbar */
-        .navbar .navbar-nav li:before {
+        /* Navbar list items should not have dots */
+        .navbar-nav li:before {
+            content: none;
+        }
+
+        .dropdown-menu li:before {
             content: none;
         }
         
-        /* Jika titik tersebut adalah bagian dari custom styling, pastikan untuk menghilangkannya */
-        .navbar .navbar-nav li.nav-item:after {
-            display: none;
-        }
-
         /* Typography */
         h4 {
             color: var(--dark-color);

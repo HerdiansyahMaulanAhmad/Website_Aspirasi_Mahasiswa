@@ -145,23 +145,30 @@
             padding-left: 20px;
         }
         
-        ul li:before {
-            content: 'none';
+        /* Modified: Exclude navbar list items from getting the dot */
+        .card-body ul li:before {
+            content: '.';
             color: var(--primary-color);
             font-weight: bold;
             position: absolute;
             left: -15px;
         }
         
-        /* Menghilangkan titik biru bundar kecil di bagian atas navbar */
-        .navbar .navbar-nav li:before {
+        /* Ensure navbar items don't have dots */
+        .navbar ul li:before {
             content: none;
         }
         
-        /* Jika titik tersebut adalah bagian dari custom styling, pastikan untuk menghilangkannya */
-        .navbar .navbar-nav li.nav-item:after {
-            display: none;
+        /* Also ensure footer list items don't have dots */
+        footer ul li:before {
+            content: none;
         }
+        
+        /* Ensure dropdown menu items don't have dots */
+        .dropdown-menu li:before {
+            content: none;
+        }
+        
 
         /* Typography */
         h4 {
