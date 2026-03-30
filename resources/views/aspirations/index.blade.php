@@ -380,7 +380,7 @@
                         </div>
                         @endauth
     
-                        <h4>Daftar Aspirasi Teknologi Informasi</h4>
+                        <h4>Daftar Aspirasi</h4>
                         @if ($aspirations->count() > 0)
                             @foreach ($aspirations as $aspiration)
                                 <div class="card mb-3">
