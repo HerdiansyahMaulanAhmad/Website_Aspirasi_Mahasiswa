@@ -376,11 +376,11 @@
                         <hr>
                         @else
                         <div class="alert alert-info">
-                            Untuk menambahkan aspirasi, silakan <a href="{{ route('login') }}">login</a> atau <a href="{{ route('register') }}">daftar</a> terlebih dahulu yaaa.
+                            Untuk menambahkan aspirasi, silakan <a href="{{ route('login') }}">login</a> atau <a href="{{ route('register') }}">daftar</a> terlebih dahulu.
                         </div>
                         @endauth
     
-                        <h4>Daftar Aspirasi Mahasiswa Teknologi Informasi</h4>
+                        <h4>Daftar Aspirasi Teknologi Informasi</h4>
                         @if ($aspirations->count() > 0)
                             @foreach ($aspirations as $aspiration)
                                 <div class="card mb-3">
@@ -405,7 +405,7 @@
                                 </div>
                             @endforeach
                         @else
-                            <p class="text-center">Belum ada aspirasi yang ditambahkan.</p>
+                            <p class="text-center">Belum ada sama sekali aspirasi yang ditambahkan.</p>
                         @endif
                     </div>
                 </div>
