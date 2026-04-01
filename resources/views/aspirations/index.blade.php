@@ -380,7 +380,7 @@
                         </div>
                         @endauth
     
-                        <h4>Daftar Aspirasi Teknologi Informasi. Universitas Muhamma</h4>
+                        <h4>Daftar Aspirasi Teknologi Informasi. Universitas Muhammadiyah Semarunggg</h4>
                         @if ($aspirations->count() > 0)
                             @foreach ($aspirations as $aspiration)
                                 <div class="card mb-3">
@@ -405,7 +405,7 @@
                                 </div>
                             @endforeach
                         @else
-                            <p class="text-center">Belum ada aspirasi yang ditambahkan.</p>
+                            <p class="text-center">Belum ada aspirasi yang ditambahkan. Ya oke deal</p>
                         @endif
                     </div>
                 </div>
