@@ -380,7 +380,7 @@
                         </div>
                         @endauth
     
-                        <h4>Daftar Aspirasi Teknologi Informasi</h4>
+                        <h4>Daftar Aspirasi Teknologi Informasi. Universitas Muhamma</h4>
                         @if ($aspirations->count() > 0)
                             @foreach ($aspirations as $aspiration)
                                 <div class="card mb-3">
@@ -420,7 +420,7 @@
             <div class="row">
                 <div class="col-md-6">
                     <h5 class="mb-3"><i class="fas fa-comment-dots me-2"></i>SAMA-TI</h5>
-                    <p>Sistem Online Suara Aspirasi Mahasiswa Teknologi Informasi Universitas </p>
+                    <p>Sistem Online Suara Aspirasi Mahasiswa</p>
                 </div>
                 <div class="col-md-3">
                     <h5 class="mb-3">Tautan</h5>
