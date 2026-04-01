@@ -405,7 +405,7 @@
                                 </div>
                             @endforeach
                         @else
-                            <p class="text-center">Belum ada aspirasi yang ditambahkan. Ya oke deal</p>
+                            <p class="text-center">Belum ada aspirasi yang ditambahkan.</p>
                         @endif
                     </div>
                 </div>
