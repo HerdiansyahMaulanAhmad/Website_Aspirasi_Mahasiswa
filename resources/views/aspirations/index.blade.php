@@ -420,7 +420,7 @@
             <div class="row">
                 <div class="col-md-6">
                     <h5 class="mb-3"><i class="fas fa-comment-dots me-2"></i>SAMA-TI</h5>
-                    <p>Sistem Online Suara Aspirasi Mahasiswa cikidot dot dot doen ti kurang dalam mengajar</p>
+                    <p>Sistem Online Suara Aspirasi Mahasiswa</p>
                 </div>
                 <div class="col-md-3">
                     <h5 class="mb-3">Tautan</h5>
@@ -433,7 +433,7 @@
                     </ul>
                 </div>
                 <div class="col-md-3">
-                    <h5 class="mb-3">Hubungi Kami</h5>
+                    <h5 class="mb-3">Hubungi Kami 2323 grobogan bersemu sekali semoga menjadi kota yang lebih baik untuk kedepannya amin ya allah</h5>
                     <ul class="list-unstyled">
                         <li><i class="fab fa-instagram me-2"></i><a href="#" class="text-white text-decoration-none">@hmti.unimus</a></li>
                         <li><i class="fab fa-instagram me-2"></i><a href="#" class="text-white text-decoration-none">@advokastrat.hmti</a></li>
