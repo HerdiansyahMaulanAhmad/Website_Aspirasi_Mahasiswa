@@ -405,7 +405,7 @@
                                 </div>
                             @endforeach
                         @else
-                            <p class="text-center">Belum ada aspirasi yang ditambahkan.</p>
+                            <p class="text-center">Belum ada aspirasi yang ditambahkan. 12 wkwk peerkuliahan diundur jam 4cokk jancai</p>
                         @endif
                     </div>
                 </div>
@@ -420,7 +420,7 @@
             <div class="row">
                 <div class="col-md-6">
                     <h5 class="mb-3"><i class="fas fa-comment-dots me-2"></i>SAMA-TI</h5>
-                    <p>Sistem Online Suara Aspirasi Mahasiswa 1213 hari ini saya kuliah pak ansor pada ahari rabu di sore hari ini cuma satumatkul anjay cokkkk</p>
+                    <p>Sistem Online Suara Aspirasi Mahasiswa</p>
                 </div>
                 <div class="col-md-3">
                     <h5 class="mb-3">Tautan</h5>
