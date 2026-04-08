@@ -420,7 +420,7 @@
             <div class="row">
                 <div class="col-md-6">
                     <h5 class="mb-3"><i class="fas fa-comment-dots me-2"></i>SAMA-TI</h5>
-                    <p>Sistem Online Suara Aspirasi Mahasiswa</p>
+                    <p>Sistem Online Suara Aspirasi Mahasiswa 1213 hari ini saya kuliah pak ansor pada ahari rabu di sore hari ini cuma satumatkul anjay cokkkk</p>
                 </div>
                 <div class="col-md-3">
                     <h5 class="mb-3">Tautan</h5>
@@ -433,7 +433,7 @@
                     </ul>
                 </div>
                 <div class="col-md-3">
-                    <h5 class="mb-3">Hubungi Kami 123 wkwkwk hari ini gw ke kampus semoga lancar dan mendapatan ilmu yang bisa ku gunakan untuk masa depan</h5>
+                    <h5 class="mb-3">Hubungi Kami</h5>
                     <ul class="list-unstyled">
                         <li><i class="fab fa-instagram me-2"></i><a href="#" class="text-white text-decoration-none">@hmti.unimus</a></li>
                         <li><i class="fab fa-instagram me-2"></i><a href="#" class="text-white text-decoration-none">@advokastrat.hmti</a></li>
