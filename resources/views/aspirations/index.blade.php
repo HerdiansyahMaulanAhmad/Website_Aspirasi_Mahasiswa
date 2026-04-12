@@ -426,7 +426,7 @@
                     <h5 class="mb-3">Tautan</h5>
                     <ul class="list-unstyled">
                         <li><a href="#" class="text-white text-decoration-none">Aspirasi</a></li>
-                        <li><a href="#" class="text-white text-decoration-none">Tentang 1232 gw ahri ini alhamdulilah baik bngeft</a></li>
+                        <li><a href="#" class="text-white text-decoration-none">Tentang</a></li>
                         @if(Auth::check())
                         <li><a href="#" class="text-white text-decoration-none">Data</a></li>
                         @endif
@@ -444,7 +444,7 @@
             <hr class="mt-4 mb-4" style="border-color: rgba(255,255,255,0.1);">
             <div class="text-center">
                 <p class="mb-0">&copy; 2025 SAMA-TI</p>
-                <p>Universitas Muhammdiyah Semarang</p>
+                <p>Universitas Muhammdiyah Semarang hdyydd besok berangkat mata kuloai pak adit tpi filing gw adalah libur hehe</p>
             </div>
         </div>
     </footer>
