@@ -423,7 +423,7 @@
                     <p>Sistem Online Suara Aspirasi Mahasiswa</p>
                 </div>
                 <div class="col-md-3">
-                    <h5 class="mb-3">Tautan uei menmbahkan suatu fitur edengan mengguanakn bahas aemroigraman vue js</h5>
+                    <h5 class="mb-3">Tautan</h5>
                     <ul class="list-unstyled">
                         <li><a href="#" class="text-white text-decoration-none">Aspirasi</a></li>
                         <li><a href="#" class="text-white text-decoration-none">Tentang</a></li>
@@ -433,7 +433,7 @@
                     </ul>
                 </div>
                 <div class="col-md-3">
-                    <h5 class="mb-3">Hubungi Kami</h5>
+                    <h5 class="mb-3">Hubungi Kami idhdiwh menambahkan suatu fitur yang berhubungan dengan bahasa pemrograman cpp</h5>
                     <ul class="list-unstyled">
                         <li><i class="fab fa-instagram me-2"></i><a href="#" class="text-white text-decoration-none">@hmti.unimus</a></li>
                         <li><i class="fab fa-instagram me-2"></i><a href="#" class="text-white text-decoration-none">@advokastrat.hmti</a></li>
