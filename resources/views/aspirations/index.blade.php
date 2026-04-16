@@ -426,14 +426,14 @@
                     <h5 class="mb-3">Tautan</h5>
                     <ul class="list-unstyled">
                         <li><a href="#" class="text-white text-decoration-none">Aspirasi</a></li>
-                        <li><a href="#" class="text-white text-decoration-none">Tentang</a></li>
+                        <li><a href="#" class="text-white text-decoration-none">Tentang wkqwiwhd fitur ii dibuat dengan menambahkan suatu kode dengan beberapa sintaks yang sedikit rumit</a></li>
                         @if(Auth::check())
                         <li><a href="#" class="text-white text-decoration-none">Data</a></li>
                         @endif
                     </ul>
                 </div>
                 <div class="col-md-3">
-                    <h5 class="mb-3">Hubungi Kami idhdiwh menambahkan suatu fitur yang berhubungan dengan bahasa pemrograman cpp</h5>
+                    <h5 class="mb-3">Hubungi Kami</h5>
                     <ul class="list-unstyled">
                         <li><i class="fab fa-instagram me-2"></i><a href="#" class="text-white text-decoration-none">@hmti.unimus</a></li>
                         <li><i class="fab fa-instagram me-2"></i><a href="#" class="text-white text-decoration-none">@advokastrat.hmti</a></li>
