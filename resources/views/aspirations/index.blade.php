@@ -423,7 +423,7 @@
                     <p>Sistem Online Suara Aspirasi Mahasiswa</p>
                 </div>
                 <div class="col-md-3">
-                    <h5 class="mb-3">Tautan</h5>
+                    <h5 class="mb-3">Tautan kjkj fitur ini menjelaskan tentang beberapa hal yamg harus dilakukan oleh programmer seperti saya karena teralihkan karena ada rtificia intelegence</h5>
                     <ul class="list-unstyled">
                         <li><a href="#" class="text-white text-decoration-none">Aspirasi  wkwkw menambahkan commit dan push tetapi gw lupa karena trlalu sibuk</a></li>
                         <li><a href="#" class="text-white text-decoration-none">Tentang</a></li>
