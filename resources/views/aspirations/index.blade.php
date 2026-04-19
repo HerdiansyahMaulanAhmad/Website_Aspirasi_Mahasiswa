@@ -425,8 +425,8 @@
                 <div class="col-md-3">
                     <h5 class="mb-3">Tautan</h5>
                     <ul class="list-unstyled">
-                        <li><a href="#" class="text-white text-decoration-none">Aspirasi</a></li>
-                        <li><a href="#" class="text-white text-decoration-none">Tentang wkqwiwhd fitur ii dibuat dengan menambahkan suatu kode dengan beberapa sintaks yang sedikit rumit</a></li>
+                        <li><a href="#" class="text-white text-decoration-none">Aspirasi  wkwkw menambahkan commit dan push tetapi gw lupa karena trlalu sibuk</a></li>
+                        <li><a href="#" class="text-white text-decoration-none">Tentang</a></li>
                         @if(Auth::check())
                         <li><a href="#" class="text-white text-decoration-none">Data</a></li>
                         @endif
